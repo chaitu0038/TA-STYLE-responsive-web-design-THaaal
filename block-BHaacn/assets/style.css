@@ -43,8 +43,405 @@ table {
 }
 
 
+:root {
+    --primary: rgb(34, 41, 70);
+    --accent: rgb(249,35,77);
+    --textDark: rgb(2, 5, 17);
+    --textLight: rgb(149, 149, 152);
+    --textWhite: rgb(255, 255, 255);
+    --bg: rgb(233, 236, 252);
+}
+
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+
+input, textarea,
+button {
+    box-shadow: none;
+    outline: 0;
+    border: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* General */
+html {
+    font-size: 16px;
+}
+body {
+    font-family: "Nunito", sans-serif;
+    line-height: 1.5;
+    color: var(--textLight);
+    font-size: 1.4rem;
+}
+
+.container {
+    max-width: 1380px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Padding */
+.padding {
+    padding: 5rem 0;
+}
+
+/* Flex */
+.flex{
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.item-start {
+    align-items: flex-start;
+}
+
+.item-center{
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/* Columns */
+.flex-15 {
+    flex: 0 1 15%;
+}
+
+.flex-20 {
+    flex: 0 1 20%;
+}
+
+.flex-25 {
+    flex: 0 1 25%;
+}
+
+.flex-30 {
+    flex: 0 1 30%;
+}
+
+.flex-40 {
+    flex: 0 1 40%;
+}
+
+.flex-50 {
+    flex: 0 1 50%;
+}
+
+.flex-48 {
+    flex: 0 1 48%;
+}
+
+.flex-60 {
+    flex: 0 1 60%;
+}
+
+.grow{
+    flex: 1 1 auto;
+}
+/* Strong */
+.line-color{
+    color: var(--accent);
+}
+
+
+
+/* Full width */
+.width-full {
+    width: 100%;
+}
+
+/* Center Elements */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    background-color: var(--accent);
+    color: #ffffff;
+    transition: all 200ms ease-in-out;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.btn:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+    color: #ffffff !important;
+}
+
+/* Texts */
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-accent {
+    color: var(--accent);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+.font-0{
+    font-size: 0;
+}
+
+/* Main */
+.section{
+    padding: 7rem 0;
+}
+
+/* article */
+.article{
+    margin-left: 2rem;
+}
+
+/* Heading */
+.heading1{
+    width: 300px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--textWhite);
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+}
+.heading {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--textDark);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+.heading-secondary {
+    font-size: 3rem;
+    color: var(--textDark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem 0;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+}
+.brand {
+    font-size: 2.5rem;
+    color: var(--textWhite);
+    font-weight: 700;
+}
+
+.nav a{
+    color: var(--textWhite);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 1.5rem;
+}
+.nav a:hover{
+    color: var(--accent);
+}
+.navbar .btn {
+    margin-top: 0;
+    text-transform: capitalize;
+}
+
+
+/* Hero */
+.hero {
+    background: radial-gradient(rgb(53,40,171),rgba(67, 93, 196, 0.6)),url(./banner.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: var(--textWhite);
+}
+.hero-heading {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.head-img {
+    margin-right: 2rem;
+}
+
+/* About */
+.about p{
+    color: #77767D;
+    font-weight: 600;
+}
+
+/* Join */
+.join{
+    background-color: #DFECFF;
+}
+
+.inline{
+    height: 30px;
+    width: 30px;
+    color: var(--accent);
+    background-color: #DFECFF;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: -2rem;
+}
+.line-box{
+    padding: 0.8rem;
+    border: 0.2rem dashed var(--accent);
+}
+.line-box h3 {
+    color: var(--textDark);
+    font-weight: 700;
+    font-size: 2rem;
+}
+.line-box p{
+    color: #6A6970;
+}
+
+/* Schedule */
+.circle-active{
+    color: var(--textWhite);
+    font-size: 2rem;
+    font-weight: 800;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding-top: 1.5rem;
+    text-align: center;
+    background-color: #F9234D;
+}
+.circle{
+    color: var(--accent);
+    font-size: 2rem;
+    font-weight: 800;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding-top: 1.5rem;
+    text-align: center;
+    background-color: transparent;
+    border: 1px dashed #F9234D;
+}
+.color-line {
+    height: 50px;
+    width: 1px;
+    border: 1px dashed #F9234D;
+    margin-left: 4.5rem;
+}
+
+
+.schedule-img {
+    border-radius: 4px;
+    margin-bottom: 4rem;
+}
+
+.schedule-box{
+    margin-bottom: 5.8rem;
+}
+
+.schedule-box h2 {
+    color: var(--textDark);
+    font-size: 2rem;
+    font-weight: 800;
+}
+.schedule-img-box {
+    background-color: #DFECFF;
+}
+.schedule-img-box img{
+    padding: 1rem;
+}
+.schedule-img-box .active{
+    color: var(--textWhite);
+    border-radius: 6px;
+    background-color: var(--accent);
+}
+.schedule-img-box h5{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--textDark);
+}
+.schedule-img-box span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--textDark);
+}
+
+/* Video */
+.banner i{
+    color: #F9234D;
+    text-align: center;
+    padding: 2.3rem 2rem;
+    margin: 15rem 33rem;
+    border-radius: 8px;
+    font-size: 3rem;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: var(--textWhite);
+}
+.banner{
+    margin: 2rem;
+    height: 100vh;
+    border-radius: 8px;
+    background: url(./banner.png) 100% 100% no-repeat;
+}
+
+/* News */
+.news{
+    background-color: #DFECFF;
+}
+.news h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--textDark);
+    margin: 1rem 0;
+}
+.news p{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: var(--textLight);
+}
+.news a{
+    color: var(--textDark);
+    text-decoration: underline;
+}
+.news .active{
+    color: var(--accent);
 }
